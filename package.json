@@ -1,0 +1,25 @@
+{
+  "name": "hooriya_fareed_countdown_timer_77",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.12.12"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "date-fns": "^3.6.0",
+    "inquirer": "^9.2.21"
+  },
+  "bin": {
+    "hooriya_fareed_countdown_timer_77": "bin/index.js"
+  }
+}
