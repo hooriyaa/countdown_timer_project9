@@ -3,14 +3,28 @@ import chalk from "chalk";
 import { differenceInSeconds } from "date-fns";
 import inquirer from "inquirer";
 differenceInSeconds;
+
 console.log("\t", "-".repeat(70), "\t");
 console.log(chalk.bold.magenta("\t\tWelcome To My Project - 'COUNTDOWN TIMER'\t\t"));
 console.log("\t", "-".repeat(70), "\t");
+
 //Get User Input
+
 const res = await inquirer.prompt({
     name: "userInput",
     type: "number",
     message: "Please enter the amount of second:",
+    validate: (input) => {
+        if (isNaN(input)) {
+            return chalk.bold.red("Please enter valid number!!");
+        }
+        else if (input > 60) {
+            return chalk.bold.red("Seconds must be in 60!!");
+        }
+        else {
+            return true;
+        }
+    },
 });
 const input = res.userInput;
 function startTime(val) {

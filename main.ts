@@ -15,6 +15,16 @@ const res = await inquirer.prompt({
   name: "userInput",
   type: "number",
   message: "Please enter the amount of second:",
+  validate: (input) => {
+    if (isNaN(input)) {
+      return chalk.bold.red("Please enter valid number!!");
+      
+    } else if (input > 60) {
+      return chalk.bold.red("Seconds must be in 60!!");
+    } else {
+      return true;
+    }
+  },
 });
 const input = res.userInput;
 
